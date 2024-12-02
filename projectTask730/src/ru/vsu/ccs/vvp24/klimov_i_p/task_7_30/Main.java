@@ -1,7 +1,6 @@
 package ru.vsu.ccs.vvp24.klimov_i_p.task_7_30;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +17,10 @@ public class Main {
                 res.add(substring.repeat(count));
             }
         }
-        System.out.println(res);
+        if (res.size() > 1) {
+            List<String> list = new ArrayList<>(res);
+            System.out.println(list.get(list.size() - 2));
+        }
     }
 
     public static int countOccurrences(String str, String substr) {
